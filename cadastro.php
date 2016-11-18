@@ -22,7 +22,7 @@ $inserir = "INSERT INTO Pessoa (Nome, Sobrenome, Idade, Cidade, Trabalho)
 VALUES ('$nome_usuario', '$sobrenome_usuario', '$idade_usuario', '$cidade_usuario', '$trabalho_usuario')";
 
 if (mysqli_query($con, $inserir)) {
-    $last_id = mysqli_insert_id($conn);
+    $last_id = mysqli_insert_id($con);
     echo "New record created successfully. Last inserted ID is: " . $last_id;
 } else {
     echo "Error: " . $inserir . "<br>" . mysqli_error($con);
